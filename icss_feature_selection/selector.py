@@ -164,3 +164,44 @@ class ICSSFeatureSelector(BaseEstimator, SelectorMixin):
         
         mask[top_indices] = True
         return mask
+
+    def transform(self, X):
+        """
+        Reduce X to the selected features.
+
+        Parameters
+        ----------
+        X : array-like of shape (n_samples, n_features, 2)
+            The input samples.
+
+        Returns
+        -------
+        X_r : array-like of shape (n_samples, k, 2)
+            The input samples with only the selected features.
+        """
+        if self.scores_ is None:
+            raise RuntimeError("You must call 'fit' before calling 'transform'.")
+            
+        # Validate input X
+        if not isinstance(X, np.ndarray):
+            X = np.asarray(X)
+        
+        if X.ndim != 3 or X.shape[2] != 2:
+            raise ValueError(
+                "Input X must be a 3D NumPy array with shape (n_samples, n_features, 2)."
+            )
+            
+        # Get the boolean mask of features to keep
+        mask = self._get_support_mask()
+        
+        # Check if number of features in X matches the one used in fit
+        if len(mask) != X.shape[1]:
+            raise ValueError(
+                f"X has {X.shape[1]} features, but ICSSFeatureSelector "
+                f"was fitted with {len(mask)} features."
+            )
+            
+        # Apply the mask to the 3D array
+        # This selects all samples, the columns (features) in the mask, 
+        # and all a-points of the interval
+        return X[:, mask, :]
