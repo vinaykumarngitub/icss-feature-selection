@@ -4,9 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "icss-feature-selection"
-version = "0.1.1"
+version = "0.1.2"
 authors = [
-    { name="Your Name", email="your.email@example.com" },
+    { name="Vinay Kumar N", email="vinaykumar.natraj@gmail.com" },
 ]
 description = "A scikit-learn compatible feature selector using the Interval Chi-Square Score (ICSS) algorithm."
 readme = "README.md"
@@ -28,5 +28,5 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/YOUR_USERNAME/icss-feature-selection"
-Issues = "https://github.com/YOUR_USERNAME/icss-feature-selection/issues"
+Homepage = "https://github.com/vinaykumarngitub/icss-feature-selection"
+Issues = "https://github.com/vinaykumarngitub/icss-feature-selection/issues"
