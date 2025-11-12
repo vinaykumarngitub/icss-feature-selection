@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "icss-feature-selection"
-version = "0.1.2"
+version = "0.1.3"
 authors = [
     { name="Vinay Kumar N", email="vinaykumar.natraj@gmail.com" },
 ]
