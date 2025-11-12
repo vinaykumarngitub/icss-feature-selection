@@ -1,6 +1,6 @@
 # This file goes in: .github/workflows/publish-to-pypi.yml
 
-name: Publish Python 🐍 distributions to PyPI
+name: Publish Python distributions to PyPI
 # This workflow uses GitHub OIDC to securely publish Python packages to PyPI
 # without needing to store PyPI credentials/secrets in GitHub.
 on:
