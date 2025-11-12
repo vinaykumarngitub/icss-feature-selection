@@ -15,7 +15,7 @@ license = { file="LICENSE" }
 keywords = ["feature selection", "scikit-learn", "chi-square", "interval data", "machine learning"]
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
     "Intended Audience :: Science/Research",
     "Topic :: Scientific/Engineering :: Information Analysis",
